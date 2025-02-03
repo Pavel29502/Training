@@ -5,7 +5,7 @@ import java.util.*;
 public class Shild {
     public static void main(String[] args) {
 
-        ArrayList<String> al = new ArrayList<String>();
+        ArrayList<String> al = new ArrayList<>();
         System.out.println("Начальный размер списочного массива al: " + al.size());
 
         al.add("C");
@@ -24,7 +24,7 @@ public class Shild {
         System.out.println("Soderjimoe massiva al: " + al);
 
         ///
-        ArrayList<Integer> all = new ArrayList<Integer>();
+        ArrayList<Integer> all = new ArrayList<>();
         all.add(1);
         all.add(2);
         all.add(3);
@@ -37,7 +37,7 @@ public class Shild {
         for (int i : ia) sum += i;
         System.out.println("Summa: " + sum);
 
-        LinkedList<String> ll = new LinkedList<String>();
+        LinkedList<String> ll = new LinkedList<>();
         ll.add("F");
         ll.add("B");
         ll.add("D");
@@ -56,7 +56,7 @@ public class Shild {
         System.out.println("Soderjimoe sv9znogo spiska posle izmenenii: " + ll);
 
         //HashSet
-        HashSet<String> hs = new HashSet<String>();
+        HashSet<String> hs = new HashSet<>();
         hs.add("Beta");
         hs.add("Alfa");
         hs.add("Eta");
@@ -66,7 +66,7 @@ public class Shild {
         System.out.println(hs);
 
         //TreeSet
-        TreeSet<String> ts = new TreeSet<String>();
+        TreeSet<String> ts = new TreeSet<>();
         ts.add("C");
         ts.add("A");
         ts.add("B");
@@ -76,7 +76,7 @@ public class Shild {
         System.out.println(ts);
 
         //ArrayDeque
-        ArrayDeque<String> adq = new ArrayDeque<String>();
+        ArrayDeque<String> adq = new ArrayDeque<>();
         adq.push("A");
         adq.push("B");
         adq.push("D");
@@ -88,7 +88,7 @@ public class Shild {
 //            System.out.println(); // тут возможно ошибка у автора со скобками
         }
         //Iterator
-        ArrayList<String> alll = new ArrayList<String>();
+        ArrayList<String> alll = new ArrayList<>();
         alll.add("C");
         alll.add("A");
         alll.add("E");
@@ -118,13 +118,15 @@ public class Shild {
         //Otobrazit' spisok v obratnom por9dke
         System.out.println("Izmenennii v obratnom por9dke spisok: ");
         while (litr.hasPrevious()) {
-            String element = litr.previous();
-            System.out.println(element + " ");
-        }
+
+        String element = litr.previous();
+        System.out.println(element + " ");
+    }
+
         System.out.println();
 
         ///Cikl for each - alternativa iteratoram
-        ArrayList<Integer> vals = new ArrayList<Integer>();
+        ArrayList<Integer> vals = new ArrayList<>();
         //Vvesti zna4enie v spiso4nii massiv
         vals.add(1);
         vals.add(2);
