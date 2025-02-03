@@ -6,7 +6,6 @@ public class Main {
         int[] arr = {3, 4, 3, 5, 5, 6, 7, 8, 3};
         Method.findTwoSum(arr, 7);
 
-
-//        Method.findDublicate(arr);
+        Method.findDuplicate(arr);
     }
 }

@@ -1,6 +1,6 @@
 package com.KhatsianouskiPavel.javacore.chapter18;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class Method {
     public static int findIndex(int[] arr, int num) {
@@ -32,4 +32,29 @@ public class Method {
         }
         return new int[]{};
     }
+
+
+    public static void findDuplicate(int[] arr) {
+        Map<Integer, List<Integer>> map = new HashMap<>();
+
+        for (int i = 0; i < arr.length; i++) {
+            int element = arr[i];
+            if (map.containsKey(element)) {
+                List<Integer> integers = map.get(element);
+                integers.add(i);
+            } else {
+                List<Integer> indexes = new ArrayList<>();
+                indexes.add(i);
+                map.put(element, indexes);
+            }
+        }
+        for (Map.Entry<Integer, List<Integer>> entry : map.entrySet()) {
+            if (entry.getValue().size() > 1) {
+                System.out.println("Число" + entry.getKey() + " повторяется в индексах" + entry.getValue());
+
+            }
+        }
+    }
 }
+
+
