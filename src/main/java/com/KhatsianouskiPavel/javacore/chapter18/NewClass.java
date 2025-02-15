@@ -29,19 +29,22 @@ public class NewClass {
         }
         for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
             if(entry.getValue() >= 2) {
-                System.out.println(entry.getKey() + " - " + entry.getValue());
+                System.out.println("Result: true");
+                System.out.println("Число" + entry.getKey() + " повторяется " + entry.getValue() + " раза");
             }
         }
+        System.out.println("Дубликатов нет");
     }
 
 
     public static void main(String[] args) {
-        int[] array = {1, 6, 8, 9, 15, 2};
-        int target = 17;
-        find(array, target);
+//        int[] array = {1, 6, 8, 9, 15, 2};
+//        int target = 17;
+//        find(array, target);
 
+        int[] arr2 = {1, 2, 4, 5};
         int[] arr1 = {1, 1, 2, 3, 9, 3};
-        findDuplicates(arr1);
+        findDuplicates(arr2);
 
     }
 
