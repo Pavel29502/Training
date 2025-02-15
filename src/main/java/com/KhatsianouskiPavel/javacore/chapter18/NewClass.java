@@ -21,9 +21,28 @@ public class NewClass {
 //        System.out.println("Нет нужных чисел");
     }
 
+    public static void findDuplicates(int[] arr) {
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for(int num : arr) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        }
+        for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            if(entry.getValue() >= 2) {
+                System.out.println(entry.getKey() + " - " + entry.getValue());
+            }
+        }
+    }
+
+
     public static void main(String[] args) {
         int[] array = {1, 6, 8, 9, 15, 2};
         int target = 17;
         find(array, target);
+
+        int[] arr1 = {1, 1, 2, 3, 9, 3};
+        findDuplicates(arr1);
+
     }
+
 }
