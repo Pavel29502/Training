@@ -1,6 +1,7 @@
 package com.KhatsianouskiPavel.javacore.chapter18;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 
 public class NewClass {
@@ -21,20 +22,35 @@ public class NewClass {
 //        System.out.println("Нет нужных чисел");
     }
 
-    public static void findDuplicates(int[] arr) {
-        Map<Integer, Integer> map = new HashMap<>();
+//    public static void findDuplicates(int[] arr) {
+//        Map<Integer, Integer> map = new HashMap<>();
+//
+//        for(int num : arr) {
+//            map.put(num, map.getOrDefault(num, 0) + 1);
+//        }
+//        for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
+//            if(entry.getValue() >= 2) {
+//                System.out.println("Result: true");
+//                System.out.println("Число" + entry.getKey() + " повторяется " + entry.getValue() + " раза");
+//            }
+//        }
+//        System.out.println("Дубликатов нет");
+//    }
 
-        for(int num : arr) {
-            map.put(num, map.getOrDefault(num, 0) + 1);
-        }
-        for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            if(entry.getValue() >= 2) {
-                System.out.println("Result: true");
-                System.out.println("Число" + entry.getKey() + " повторяется " + entry.getValue() + " раза");
+    public static void findDuplicates(int[] arr) {
+        HashSet<Integer> hSet = new HashSet<>();
+
+        for (int num : arr) {
+            if (!hSet.add(num)) {
+                System.out.println("Дубликат  " + num);
+                break;
+            } else {
+                hSet.add(num);
             }
         }
-        System.out.println("Дубликатов нет");
+        System.out.println("Нет дубликатов");
     }
+
 
 
     public static void main(String[] args) {
@@ -43,7 +59,7 @@ public class NewClass {
 //        find(array, target);
 
         int[] arr2 = {1, 2, 4, 5};
-        int[] arr1 = {1, 1, 2, 3, 9, 3};
+        int[] arr1 = {1, 7, 2, 3, 9, 3};
         findDuplicates(arr2);
 
     }
